@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, inital-scale=1.0">
+        <title>Sudoku Solver</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            img {
+                max-width: 100%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <script type="text/javascript" src="script.js"></script>
+        <header>
+            <div class='head1'>SUDOKU SOLVER</div>
+        </header>
+
+        <table id="grid" border="1">
+            <tr class="row">
+                <td class="cell" bgcolor="black"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell" bgcolor="black"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell" bgcolor="black"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell" ><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell" bgcolor="black"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell" bgcolor="black"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell" bgcolor="black"><input type="text" inputmode="numeric" min="1" max="9"></td>
+            </tr>
+
+            <tr class="row">
+                <td class="cell" bgcolor="black"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell" bgcolor="black"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell" bgcolor="black"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell" bgcolor="black"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell" bgcolor="black"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell" bgcolor="black"><input type="text" inputmode="numeric" min="1" max="9"></td>
+            </tr>
+
+            <tr class="row">
+                <td class="cell" bgcolor="black"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell" bgcolor="black"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell" bgcolor="black"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell" bgcolor="black"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell" bgcolor="black"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell" bgcolor="black"><input type="text" inputmode="numeric" min="1" max="9"></td>
+            </tr>
+
+            <tr class="row">
+                <td class="cell"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell" bgcolor="black"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell" bgcolor="black"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell" bgcolor="black"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell"><input type="text" inputmode="numeric" min="1" max="9"></td>
+            </tr>
+
+            <tr class="row">
+                <td class="cell"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell" bgcolor="black"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell" bgcolor="black"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell" bgcolor="black"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell"><input type="text" inputmode="numeric" min="1" max="9"></td>
+            </tr>
+
+            <tr class="row">
+                <td class="cell"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell" bgcolor="black"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell" bgcolor="black"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell" bgcolor="black"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell"><input type="text" inputmode="numeric" min="1" max="9"></td>
+            </tr>
+
+            <tr class="row">
+                <td class="cell" bgcolor="black"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell" bgcolor="black"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell" bgcolor="black"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell" bgcolor="black"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell" bgcolor="black"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell" bgcolor="black"><input type="text" inputmode="numeric" min="1" max="9"></td>
+            </tr>
+
+            <tr class="row">
+                <td class="cell" bgcolor="black"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell" bgcolor="black"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell" bgcolor="black"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell" bgcolor="black"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell" bgcolor="black"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell" bgcolor="black"><input type="text" inputmode="numeric" min="1" max="9"></td>
+            </tr>
+
+            <tr class="row">
+                <td class="cell" bgcolor="black"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell" bgcolor="black"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell" bgcolor="black"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell" bgcolor="black"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell" bgcolor="black"><input type="text" inputmode="numeric" min="1" max="9"></td>
+                <td class="cell" bgcolor="black"><input type="text" inputmode="numeric" min="1" max="9"></td>
+            </tr>
+        </table>
+
+        <div class="buttons">
+            <button type="button" id="submit" onclick="solve()">Submit</button>
+            <button type="button" id="reset" onclick="resetGrid()">Reset</button>
+        </div>
+    </body>
+</html>

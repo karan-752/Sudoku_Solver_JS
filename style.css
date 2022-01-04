@@ -1,0 +1,41 @@
+.head1 {
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+    color: black;
+}
+
+.buttons {
+    align-items: center;
+    justify-content: center;
+    top: 90%;
+    left: 50%;
+    position: fixed;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+table {
+    margin-top: 1em auto;
+    border: solid black;
+}
+
+#grid {
+    width: 378px;
+    height: 395px;
+    border: 3px solid #000000;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+.cell input {
+    display: inline-block;
+
+    border: 1px solid black;
+    width: 40px;
+    height: 40px;
+
+    text-align: center;
+    font-size: 30px;
+}
